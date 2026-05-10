@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوتيك أنو للأكسسوارات | Ano Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cairo:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gold: #A68A5E;
+            --light-bg: #fdfdfd;
+            --text-dark: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Amiri', serif;
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=1000'); /* صورة تعبيرية */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 50px;
+            height: 2px;
+            background: var(--primary-gold);
+            display: block;
+            margin: 10px auto;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            text-align: center;
+            padding-bottom: 1.5rem;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 300px;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .product-info h3 {
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .product-colors {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .color-dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+        }
+
+        .gold { background: #D4AF37; }
+        .silver { background: #C0C0C0; }
+        .rose { background: #E0BFB8; }
+
+        .btn-buy {
+            background: var(--primary-gold);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Cairo';
+            transition: opacity 0.3s;
+        }
+
+        .btn-buy:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background: #f4f4f4;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">بوتيك أنو</div>
+        <nav>
+            <a href="#rings">خواتم</a>
+            <a href="#necklaces">سلاسل</a>
+            <a href="#anklets">خلاخيل</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>أناقة تكتمل بتفاصيلك</h1>
+            <p>مجموعة مختارة من الأكسسوارات الذهبية والفضية والروز جولد</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="section-title">
+            <h2>أحدث المنتجات</h2>
+        </div>
+
+        <div class="products-grid">
+            <!-- خاتم -->
+            <div class="product-card">
+                <div class="product-image">صورة الخاتم هنا</div>
+                <div class="product-info">
+                    <h3>خاتم كلاسيكي</h3>
+                    <div class="product-colors">
+                        <div class="color-dot gold" title="ذهبي"></div>
+                        <div class="color-dot silver" title="فضي"></div>
+                        <div class="color-dot rose" title="روز جولد"></div>
+                    </div>
+                    <button class="btn-buy">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <!-- سلسال -->
+            <div class="product-card">
+                <div class="product-image">صورة السلسال هنا</div>
+                <div class="product-info">
+                    <h3>سلسال ناعم</h3>
+                    <div class="product-colors">
+                        <div class="color-dot gold"></div>
+                        <div class="color-dot silver"></div>
+                    </div>
+                    <button class="btn-buy">إضافة للسلة</button>
+                </div>
+            </div>
+
+            <!-- خلخال -->
+            <div class="product-card">
+                <div class="product-image">صورة الخلخال هنا</div>
+                <div class="product-info">
+                    <h3>خلخال أنيق</h3>
+                    <div class="product-colors">
+                        <div class="color-dot gold"></div>
+                        <div class="color-dot rose"></div>
+                    </div>
+                    <button class="btn-buy">إضافة للسلة</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 بوتيك أنو للأكسسوارات. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
